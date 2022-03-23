@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter APP</title>
+    <style>
+        body{
+            background-color: whitesmoke;
+        }
+        .elements{
+            border: 4px solid black;
+            background-color: gray;
+            margin: auto;
+            width: 50%;
+            height: 700px;
+        }
+        .elements *{
+            text-align: center;
+            padding: 10%;
+        }
+    </style>
+</head>
+<body>
+    <div class="elements">
+        <h1>Counter Application</h1>
+        <h3 id = "count"> 0 </h3>
+        <h3 id = "followersText">Followers On Instagram</h3>
+    </div>
+</body>
+<script>
+    let count = document.getElementById("count");
+    let N  = parseInt(count.innerHTML);
+    let x = setInterval(() => {
+        if(N >= 1000){
+            clearInterval(x);
+        }
+        count.innerText = N;
+        console.log(count.innerText);
+        N++;
+    }, 3);
+    let followersText = document.getElementById("followersText");
+    let text = "Congo You Hit Your Highest Number Of Followers";
+    setTimeout(() => {
+        followersText.innerHTML = text;
+    }, 10000);
+</script>
+</html>
