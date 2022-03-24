@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computer Properties In JavaScript</title>
+    <style>
+        .color{
+            margin: auto;
+            width: 18%;
+            height: 50px;
+        }
+        .color-hover{
+            display: flex;
+            margin: auto;
+            width: 100%;
+        }
+        .red{
+            background-color: red;
+        }
+        .cyan{
+            background-color: cyan;
+        }
+        .violet{
+            background-color: violet;
+        }
+        .orange{
+            background-color: orange;
+        }
+        .pink{
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <div class="color-hover">
+        <div class="color red"></div>
+        <div class="color cyan"></div>
+        <div class="color violet"></div>
+        <div class="color orange"></div>
+        <div class="color pink"></div>
+    </div>
+    <div class="center"></div>
+    <script>
+        const red = document.querySelector(".red");
+        const cyan = document.querySelector(".cyan");
+        const violet = document.querySelector(".violet");
+        const orange = document.querySelector(".orange");
+        const pink = document.querySelector("pink");
+
+        const centre = document.querySelector(".center");
+        
+    //    console.log(window.getComputedStyle(red).backgroundColor);
+        const getBGColor = (selectedElement)=>{
+            return window.getComputedStyle(selectedElement).backgroundColor;
+        };
+        console.log(getBGColor(red));
+    </script>
+</body>
+</html>
